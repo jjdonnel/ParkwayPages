@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Parkway Pages</title>
+    <script type="text/javascript" src="parkwayGolf.js"></script>
+    <link rel="stylesheet" type="text/css" href="parkway.css">
+
+    <style>
+        .toppic {
+
+            animation-name: topcloudpics;
+            animation-duration: 30s;
+            background-color: black;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes topcloudpics {
+            0% {
+                background-image: url("pictures/swirlyclouds.jpg");
+            }
+            33% {
+                background-image: url("pictures/Clouds5.1.jpg");
+            }
+            66% {
+                background-image: url("pictures/Clouds2.jpg");
+            }
+            100% {
+                background-image: url("pictures/Clouds3.jpg");
+            }
+        }
+
+        .bottompic {
+            animation-name: golfpics;
+            animation-duration: 20s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes golfpics {
+            0% {
+                background-image: url("pictures/Lincoln2.jpg");
+            }
+            33% {
+                background-image: url("pictures/Lincoln4.jpg");
+            }
+            66% {
+                background-image: url("pictures/MtWashington.jpg");
+            }
+            100% {
+                background-image: url("pictures/MtWashington2.jpg");
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Banner Image-->
+
+    <div class="toppic">
+        <h1>Parkway Golf</h1>
+    </div>
+
+    <!--Navigation Bar-->
+    <!--Home Site Dropdown-->
+
+    <ul id="menu" class="navbar">
+        <li><a href="homepage.html">Home</a>
+            <ul>
+                <li><a href="weather.html">Weather</a></li>
+            </ul>
+        </li>
+
+        <!--Function Buttons-->
+
+        <li id="swingMenu" onClick="openSwingMenu()">Swing Menu</li>
+        <li><a id="pgaBoard" onClick="pgaBoard()" href="https://www.pgatour.com/leaderboard.html" target="board">PGA Tour</a></li>
+        <li><a id="WebBoard" onClick="WebBoard()" href="https://www.pgatour.com/webcom/leaderboard.html" target="board">Web.com Tour</a></li>
+        <li><a href="https://warm-falls-82238.herokuapp.com/" onClick="toggleApp()" id="displayApp" target="app">RhodyGolf</a></li>
+
+
+
+    </ul>
+
+    <!--Side Navigation   -->
+
+    <div id="proSwingMenu">
+        <br>
+        <br>
+        <h2 style="color: rgba(50,180,50); text-shadow: 1px 1px black;">Pro Swings</h2>
+        <br>
+        <ul>
+            <li><a onClick="toggleSwing()" href="https://www.youtube.com/embed/11mKyZ_Ee-Y" target="swing">Bobby Jones</a></li>
+            <li><a onclick="analyzeBob()">   Analysis  &#62</a></li>
+            <li><a onClick="toggleSwing()" href="https://www.youtube.com/embed/HWTNGwV3b_E" target="swing">Ben Hogan</a></li>
+            <li><a onClick="toggleSwing()" href="https://www.youtube.com/embed/3eQd1zxKihQ" target="swing">Louie Oosthuizen</a></li>
+            <li><a onClick="toggleSwing()" href="https://www.youtube.com/embed/VV-VcKMUZsM" target="swing">Tiger Woods</a></li>
+            <li><a onClick="toggleSwing()" href="https://www.youtube.com/embed/DnmdnBBhzz0" target="swing">Rory McIlroy</a></li>
+        </ul>
+    </div>
+
+    <!--Viewing Area    -->
+
+    <div class="bottompic" id="bottompic" style="background-image: url(pictures/augusta1.jpe); background-size: cover; background-repeat: no-repeat;">
+        
+        <iframe name="app" id="app" height="980" width="1200" style="position: absolute; top: 20px; margin-left: 25%;" frameborder="0"></iframe>
+        <iframe name="board" id="board" width="1300" height="950" style="position: absolute; top: 25px;" frameborder="0"></iframe>
+        <iframe name="frame1" id="frame1" width="800" height="600" style="float: right; position: absolute; top: 175px;" frameborder="0"></iframe>
+        <iframe name="swing" id="swing" width="900" height="700" style="position: absolute; display: none;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p id="bobSwingText" style="display: none;">Bobby Jones, the ultimate example of smooth efficiency, free economy of movement. A swing poured out of a pitcher rather than an attack on the golf ball.</p>
+
+
+    </div>
+
+    <script type="text/js" src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"> </script>
+
+</body>
+
+</html>

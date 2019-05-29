@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parkway Pages</title>
+    <link rel="stylesheet" type="text/css" href="parkway.css">
+    <script type="text/javascript" src="parkway.js"></script>
+
+    <style>
+        .toppic {
+
+            animation-name: topcloudpics;
+            animation-duration: 30s;
+            background-color: black;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes topcloudpics {
+            0% {
+                background-image: url("pictures/swirlyclouds.jpg");
+            }
+            33% {
+                background-image: url("pictures/Clouds5.1.jpg");
+            }
+            66% {
+                background-image: url("pictures/Clouds2.jpg");
+            }
+            100% {
+                background-image: url("pictures/Clouds3.jpg");
+            }
+        }
+
+        .bottompic {
+
+            animation-name: cloudpics;
+            animation-duration: 50s;
+            background-color: black;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes cloudpics {
+            0% {
+                background-image: url("pictures/Clouds1.jpg");
+            }
+            18% {
+                background-image: url("pictures/Clouds4.jpg");
+            }
+            36% {
+                background-image: url("pictures/Clouds5.jpg");
+            }
+            54% {
+                background-image: url("pictures/Clouds6.jpg");
+            }
+            72% {
+                background-image: url("pictures/Clouds7.jpg");
+            }
+            100% {
+                background-image: url("pictures/Rainbow.jpg");
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toppic">
+        <h1>Parkway Weather</h1>
+    </div>
+
+    <ul id="menu" class="navbar">
+        <li><a href="homepage.html">Home</a>
+            <ul>
+                <li><a href="golf.html">Golf</a></li>
+            </ul>
+        </li>
+        <li><a onClick="toggleSatellite()" id="satFrame">Satellite</a>
+            <ul>
+                <li><a href="https://weather.cod.edu/satrad/?parms=continental-conus-14-24-1-100-1&checked=map&colorbar=undefined" target="satellite">Enhanced IR</a></li>
+                <li><a href="https://weather.cod.edu/satrad/?parms=continental-conus-08-24-1-100-1&checked=map&colorbar=undefined" target="satellite">Water Vapor</a></li>
+                <li><a href="https://weather.cod.edu/satrad/?parms=continental-conus-01-24-1-100-1&checked=map&colorbar=undefined" target="satellite">Visible</a></li>
+            </ul>
+        </li>
+        <li><a href="https://blooming-citadel-74577.herokuapp.com" onClick="toggleBlog()" id="displayBlog" target="frame1">RhodyWeather</a></li>
+        <li><a onClick="toggleClouds()" id="displayClouds">Cloud Base</a></li>
+        <li><a onClick="showCalc()" id="displayCalc">Calculator</a></li>
+    </ul>
+
+
+    <div class="bottompic" style="background-image: url(pictures/satellite.PNG);  background-size: cover; background-repeat: no-repeat;">
+        <iframe name="satellite" id="satellite" height="900" width="1400" style="float: center; top: 40px; position: absolute; display: block;" frameborder="0"></iframe>
+        <iframe height="700" width="600" style="position: absolute; top: 175px;" frameborder="0" name="board" id="board"></iframe>
+        <!--<iframe name="louie" id="louie" src="https://www.youtube.com/embed/3eQd1zxKihQ" width="560" height="315" style="position: absolute; top: 175px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+        <iframe name="frame1" id="frame1" height="1000" width="1000" style="position: relative; float: right; margin-left: 25%; top: 20px;" frameborder="0"></iframe>
+
+
+
+        <div id="clouds">
+            <h2>Cloud Base Height</h2>
+            <p>In fair weather ambient conditions, the cloud base height can be estimated by applying a factor to the dewpoint depression, that is, the difference between air temperature and the dew point tempereture.</p>
+            <br>
+            <input type="text" id="temp" placeholder="Fahrenheit temperature"> degrees F
+            <br>
+            <br>
+            <input type="text" id="dewpt" placeholder="Fahrenheit dew point"> degrees F
+            <br>
+            <br>
+            <button class="calcButton" onclick="baseHeightCalculator()">Calculate</button>
+            <br>
+            <h3 id="answer"></h3>
+        </div>
+
+        <div id="calculator">
+            <!--<fieldset>-->
+            <form name="calculator" id="calculate">
+                <input class="readout" type="text" name="display" />
+                <input class="clearButton" type="reset" value="C" />
+                <input class="mathButtons" type="button" value="&#8317" onclick="calculator.display.value += '( '" />
+                <input class="mathButtons" type="button" value="&#8318" onclick="calculator.display.value += ' ) '" />
+                <input class="mathButtons" type="button" value="sin" onclick="calculator.display.value = Math.sin(calculator.display.value)" />
+                <input class="mathButtons" type="button" value="cos" onclick="calculator.display.value = Math.cos(calculator.display.value)" />
+                <input class="mathButtons" type="button" value="tan" onclick="calculator.display.value = Math.tan(calculator.display.value)" />
+                <input class="buttonDigit" type="button" value="7" onclick="calculator.display.value += '7'" />
+                <input class="buttonDigit" type="button" value="8" onclick="calculator.display.value += '8'" />
+                <input class="buttonDigit" type="button" value="9" onclick="calculator.display.value += '9'" />
+                <input class="mathButtons" type="button" value="+" onclick="calculator.display.value += ' + '" />
+                <input class="mathButtons" type="button" value="&#8730" onclick="calculator.display.value = Math.sqrt(calculator.display.value)" />
+                <input class="mathButtons" type="button" value="&#8508" onclick="calculator.display.value = Math.PI" />
+                <br>
+                <input class="buttonDigit" type="button" value="4" onclick="calculator.display.value += '4'" />
+                <input class="buttonDigit" type="button" value="5" onclick="calculator.display.value += '5'" />
+                <input class="buttonDigit" type="button" value="6" onclick="calculator.display.value += '6'" />
+                <input class="mathButtons" type="button" value="-" onclick="calculator.display.value += ' - '" />
+                <input class="mathButtons" type="button" value="&#8731" onclick="calculator.display.value = Math.cbrt(calculator.display.value)" />
+                <input class="mathButtons" type="button" value="ln" onclick="calculator.display.value = Math.log(calculator.display.value)" />
+                <br>
+                <input class="buttonDigit" type="button" value="1" onclick="calculator.display.value += '1'" />
+                <input class="buttonDigit" type="button" value="2" onclick="calculator.display.value += '2'" />
+                <input class="buttonDigit" type="button" value="3" onclick="calculator.display.value += '3'" />
+                <input class="mathButtons" type="button" value="&#215" onclick="calculator.display.value += ' * '" />
+                <input class="mathButtons" type="button" value="x&#178" onclick="calculator.display.value = Math.pow(calculator.display.value, 2)" />
+                <input class="mathButtons" type="button" value="e" onclick="calculator.display.value += '2.71828'" />
+                <br>
+                <input class="buttonDigit" type="button" value="0" onclick="calculator.display.value += '0'" />
+                <input class="equalButton" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)" />
+                <input class="mathButtons" type="button" value="&#247" onclick="calculator.display.value += ' / '" />
+                <input class="mathButtons" type="button" value="x&#179" onclick="calculator.display.value = Math.pow(calculator.display.value, 3)" />
+                <input class="mathButtons" type="button" value="&#8730" onclick="calculator.display.value = Math.sqrt(calculator.display.value)" />
+            </form>
+            <!--</fieldset>-->
+        </div>
+
+    </div>
+
+</body>
+
+</html>

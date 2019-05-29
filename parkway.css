@@ -1,0 +1,460 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+	height: 1180px;
+	/*float: left;*/
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+
+}
+
+h1 {
+	
+	font-family: arial;
+	font-size: 50px;
+	color: rgba(255, 255, 255, 0.3);
+	text-shadow: 2px 2px black;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+
+}
+
+a:hover,
+#swingMenu:hover,
+#displayLeaderboard:hover {
+
+	background-color: green;
+	transition: all .3s ease-in;
+
+}
+
+h2,
+p {
+
+	float: left;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(250, 250, 250);
+
+}
+
+.navbar {
+
+	position: fixed;
+	background-color: gray;
+	overflow: visible;
+	top: 13%;
+	width: 100%;
+	height: 30px;
+	box-shadow: 0px 2px 5px black;
+	z-index: 10;
+
+}
+
+#menu {
+
+	position: fixed;
+	background-color: gray;
+	top: 130px;
+	width: 100%;
+	height: 30px;
+	box-shadow: 0px 2px 5px black;
+	z-index: 10;
+
+}
+
+#menu li {
+
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	/*text-shadow: 1px 1px rgba(100,100,100);*/
+	float: left;
+	list-style-type: none;
+	color: blue;
+	font-family: arial;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+
+#menu li a {
+
+	color: blue;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	transition: all .3s ease-in;
+	/*transition: all 0.5s ease-out;*/
+}
+
+#menu li ul {
+
+	display: none;
+	position: absolute;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+
+}
+
+#menu li:hover ul {
+
+	display: block;
+	top: 30px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	box-shadow: 0px 1px 1px black;
+
+}
+
+#menu li ul li {
+
+	background-color: gray;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	float: none;
+	color: blue;
+	text-decoration: none;
+	font-family: arial;
+	font-weight: bold;
+	transition: all 1s ease;
+	cursor: pointer;
+
+}
+
+#menu li a:hover {
+
+	background-color: green;
+}
+
+/*#menu li ul {*/
+
+/*	display: none;*/
+
+/*}*/
+
+/*#menu li:hover ul {*/
+
+/*	display: block;*/
+
+/*box-shadow: 0px 2px 2px 0px black;*/
+
+/*}*/
+
+#menu li ul li:hover {
+
+	background-color: green;
+}
+
+#menu li ul li ul {
+
+	margin-left: 120px;
+}
+
+#menu li ul li ul li {
+
+	position: relative;
+	/*display: none;*/
+	opacity: 0;
+	top: -30px;
+
+}
+
+#menu li ul li:hover li {
+
+	display: block;
+	opacity: 1;
+}
+
+
+
+.toppic {
+
+	position: fixed;
+	/*z-index: 10;*/
+	height: 140px;
+	width: 100%;
+	/*z-index: ;*/
+	background: url("pictures/swirlyclouds.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	/*position: fixed;*/
+}
+
+.bottompic {
+
+	height: 1000px;
+	width: 100%;
+	margin-left: 0px;
+	position: fixed;
+	top: 140px;
+	float: left;
+	z-index: 0;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	/*animation-name: parkwaypics;*/
+	/*animation-duration: 4s;*/
+	/*animation-direction: alternate;*/
+	/*animation-iteration-count: infinite;*/
+}
+
+.bottompic {
+	
+	animation-name: parkwaypics;
+	animation-duration: 40s;
+	background-color: black;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+@keyframes parkwaypics {
+	0% {
+		background-image: url("pictures/April.jpg");
+	}
+	20% {
+		background-image: url("pictures/March.jpg");
+	}
+	40% {
+		background-image: url("pictures/April21.jpg");
+	}
+	60% {
+		background-image: url("pictures/Lincoln2.jpg");
+	}
+	80% {
+		background-image: url("pictures/Lincoln4.jpg");
+	}
+	100% {
+		background-image: url("pictures/May1.jpg");
+	}
+}
+
+
+#bobSwingText {
+
+	position: absolute;
+	float: right;
+	width: 500px;
+	height: 300px;
+	color: rgba(0, 250, 00);
+	font-size: 25pt;
+	text-shadow: 1px 1px black;
+	margin-left: 900px;
+	margin-top: 100px;
+}
+
+
+.frames {
+
+	float: left;
+}
+
+#proSwingMenu {
+
+	height: 1000px;
+	width: 160px;
+	display: none;
+	position: fixed;
+	z-index: 0;
+	top: 140px;
+	left: 0;
+	background-color: rgba(50, 50, 100, 0.6);
+
+	overflow: hidden;
+	display: block;
+	/*float: left;*/
+}
+
+#proSwingMenu a,
+h2 {
+
+	color: rgba(00, 00, 250);
+	display: block;
+	/*border-radius: 25px;*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	float: none;
+	text-decoration: none;
+
+}
+
+#proSwingMenu li {
+
+	display: block;
+	font-family: arial;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+
+#clouds,
+#cagr,
+#rate {
+
+	position: relative;
+	display: none;
+	height: 400px;
+	width: 400px;
+	top: 100px;
+	float: right;
+	box-shadow: 0px 2px 2px 2px black;
+	padding: 5px;
+	font-family: arial;
+	font-size: 18px;
+	font-weight: bold;
+	color: rgba(250, 250, 250);
+
+}
+
+#calculator {
+	float: right;
+}
+
+#clouds {
+
+	background-color: rgba(60, 60, 60, 0.8);
+
+}
+
+#cagr {
+
+	background-color: rgba(00, 60, 00, 0.8);
+}
+#cagr h2, #clouds h2, #rate h2 {
+	color: rgba(00, 227, 250);
+}
+
+#rate {
+
+	background-color: rgba(00, 00, 60, 0.7);
+}
+
+.bottompic object {
+
+	position: absolute;
+	top: 200px;
+}
+
+#board,
+#frame1 {
+
+	display: none;
+
+}
+
+#board {
+	margin-left: 20%;
+	/*margin-top: 10%;*/
+}
+
+#calculate {
+
+	display: none;
+	position: relative;
+	background-color: rgba(0, 0, 150, 0.6);
+	height: 430px;
+	width: 400px;
+	top: 100px;
+	float: left;
+	padding: 10px;
+	box-shadow: 3px 3px;
+
+}
+
+.readout {
+
+	font-family: draftsman;
+	font-size: 24px;
+	padding: 5px;
+	width: 345px;
+	height: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: linear-gradient(white, gray, black);
+
+}
+
+
+.buttonDigit,
+.clearButton {
+
+	font-family: arial;
+	font-size: 15px;
+	font-weight: bold;
+	height: 40px;
+	width: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: linear-gradient( white, gray, black);
+
+}
+
+.equalButton {
+
+	font-family: arial;
+	font-size: 24px;
+	font-weight: bold;
+	height: 40px;
+	width: 104px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: linear-gradient( white, gray, black);
+
+}
+
+.mathButtons {
+
+	font-family: arial;
+	font-size: 15px;
+	font-weight: bold;
+	height: 40px;
+	width: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: linear-gradient( white, green, black);
+
+}
+
+
+#baseHeight {
+
+	height: 50px;
+	width: 200px;
+
+}
+
+.calcButton,
+#temp,
+#dewpt {
+
+	font-family: arial;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(0, 0, 100);
+
+}
