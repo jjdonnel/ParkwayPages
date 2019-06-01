@@ -273,10 +273,10 @@ p {
 	z-index: 0;
 	top: 140px;
 	left: 0;
-	background-color: rgba(50, 50, 100, 0.6);
-
+	background-color: rgba(50, 50, 100, 0.6); 
+	opacity: 50%;
 	overflow: hidden;
-	display: block;
+	/*display: block;*/
 	/*float: left;*/
 }
 
