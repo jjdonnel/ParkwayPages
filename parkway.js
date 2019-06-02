@@ -134,6 +134,21 @@ function toggleSatellite() {
 	}
 }
 
+function toggleRadar() {
+
+	var myRad = document.getElementById('radar');
+	var showRad = document.getElementById('radFrame');
+
+	if (myRad.style.display == 'block') {
+		myRad.style.display = 'none';
+		showRad.innerHTML = 'Radar';
+	}
+	else {
+		myRad.style.display = 'block';
+		showRad.innerHTML = 'Hide';
+	}
+}
+
 
 function leaderBoard() {
 

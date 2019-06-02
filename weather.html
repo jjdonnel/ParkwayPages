@@ -82,6 +82,12 @@
                 <li><a href="https://weather.cod.edu/satrad/?parms=continental-conus-01-24-1-100-1&checked=map&colorbar=undefined" target="satellite">Visible</a></li>
             </ul>
         </li>
+        <li><a onClick="toggleRadar()" id="radFrame">Radar</a>
+            <ul>
+                <li><a href="https://weather.cod.edu/satrad/?parms=continental-conus-comp_radar-48-1-100-1&checked=map&colorbar=undefined" target="radar">Conus Radar</a></li>
+                <li><a href="https://weather.cod.edu/satrad/?parms=subregional-New_England-comp_radar-48-1-100-1&checked=map&colorbar=undefined" target="radar">NEUS Radar</a></li>
+            </ul>
+        </li>
         <li><a href="https://blooming-citadel-74577.herokuapp.com" onClick="toggleBlog()" id="displayBlog" target="frame1">RhodyWeather</a></li>
         <li><a onClick="toggleClouds()" id="displayClouds">Cloud Base</a></li>
         <li><a onClick="showCalc()" id="displayCalc">Calculator</a></li>
@@ -90,9 +96,10 @@
 
     <div class="bottompic" style="background-image: url(pictures/satellite.PNG);  background-size: cover; background-repeat: no-repeat;">
         <iframe name="satellite" id="satellite" height="900" width="1400" style="float: center; top: 40px; position: absolute; display: block;" frameborder="0"></iframe>
+        <iframe name="radar" id="radar" height="900" width="1400" style="float: center; top: 40px; position: absolute; display: block;" frameborder="0"></iframe>
         <iframe height="700" width="600" style="position: absolute; top: 175px;" frameborder="0" name="board" id="board"></iframe>
         <!--<iframe name="louie" id="louie" src="https://www.youtube.com/embed/3eQd1zxKihQ" width="560" height="315" style="position: absolute; top: 175px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-        <iframe name="frame1" id="frame1" height="500" width="1000" style="position: relative; float: right; margin-left: 25%; top: 20px;" frameborder="0"></iframe>
+        <iframe name="frame1" id="frame1" height="1000" width="1200" style="position: relative; float: right; margin-left: 25%; top: 20px;" frameborder="0"></iframe>
 
 
 
