@@ -90,37 +90,18 @@
                     <li><a onClick="showCalc()" id="displayCalc">Calculator</a></li>
                 </ul>
             </li>
-            <li> <a id="mapButton" onClick="toggleMap()">Map</a></li>
             
+            <li> <a id="mapButton" onClick="toggleMap()">Map</a></li>
+
     </ul>
 
 
     <div class="bottompic">
 
-        <iframe name="board" id="board" height="950" width="1300" style="position: absolute; top: 100px;" frameborder="0"></iframe>
-        <iframe name="frame1" id="frame1" height="900" width="1200" style="float: right; position: relative; top: 50px;" frameborder="0"></iframe>
+        <iframe name="board" id="board" height="570" width="1300" style="position: absolute; top: 25px;" frameborder="0"></iframe>
+        <iframe name="frame1" id="frame1" height="570" width="1200" style="float: right; position: relative; top: 25px;" frameborder="0"></iframe>
         <iframe name="map" id="map" style="float: right; position: absolute; top: 25px; display: none; margin-left: 10px;" src="https://www.google.com/maps/embed?pb=!1m13!1m11!1m3!1d140397.68228741759!2d-71.48169045355387!3d40.93566301525928!2m2!1f0!2f32.917451887622605!3m2!1i1024!2i768!4f35!5e1!3m2!1sen!2sus!4v1555047405837!5m2!1sen!2sus"
             width="800" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-
-        <div id="rate">
-            <h2>Growth Rate</h2>
-            <p>Calculates the compound annual growth rate given initial and final values.</p>
-            <br>
-            <br>
-            <input type="text" id="initialValue" placeholder="Initial Value"> dollars
-            <br>
-            <br>
-            <input type="text" id="finalValue" placeholder="Final Value"> dollars
-            <br>
-            <br>
-            <input type="text" id="time" placeholder="Time"> years
-            <br>
-            <br>
-            <button class="calcButton" onclick="rateCalculator()">Calculate</button>
-            <br>
-            <h3 id="growthRate"></h3>
-        </div>
 
         <div id="cagr">
             <h2>Compound Annual Growth</h2>
@@ -143,6 +124,27 @@
             <h3 id="futureValue"></h3>
         </div>
 
+        <div id="rate">
+            <h2>Growth Rate</h2>
+            <p>Calculates the compound annual growth rate given initial and final values.</p>
+            <br>
+            <br>
+            <input type="text" id="initialValue" placeholder="Initial Value"> dollars
+            <br>
+            <br>
+            <input type="text" id="finalValue" placeholder="Final Value"> dollars
+            <br>
+            <br>
+            <input type="text" id="duration" placeholder="Time"> years
+            <br>
+            <br>
+            <button class="calcButton" onclick="rateCalculator()">Calculate</button>
+            <br>
+            <h3 id="growthRate"></h3>
+        </div>
+
+
+
 
         <div id="clouds">
             <h2>Cloud Base Height</h2>
@@ -159,7 +161,7 @@
             <h3 id="answer"></h3>
         </div>
 
-
+        
 
         <div id="calculator">
             <form name="calculator" id="calculate">

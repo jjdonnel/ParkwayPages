@@ -1,33 +1,3 @@
-function showRate() {
-
-	var rateValue = document.getElementById('rate');
-	var displayRate = document.getElementById('displayRate');
-
-	if (rateValue.style.display == 'block') {
-		rateValue.style.display = 'none';
-		displayRate.innerHTML = 'Growth Rate';
-	}
-	else {
-		rateValue.style.display = 'block';
-		displayRate.innerHTML = 'Hide';
-	}
-}
-
-function rateCalculator() {
-	
-	// var contribution = parseInt(document.getElementById("contribution").value);
-	var initialValue = parseInt(document.getElementById("initialValue").value);
-	var finalValue = parseInt(document.getElementById("finalValue").value);
-	var time = parseInt(document.getElementById("time").value);
-	var rate = (((finalValue / initialValue) **  (1 / time) - 1) * 100).toFixed(2);
-	
-	if(!isNaN(rate)) {
-	
-		document.getElementById("growthRate").innerHTML = "Your investment growth rate is " + rate + " %.";
-	}
-}
-
-
 function showCagr() {
 
 	var cagrValue = document.getElementById('cagr');
@@ -49,7 +19,7 @@ function cagrCalculator() {
 	var presentValue = parseInt(document.getElementById("presentValue").value);
 	var interestRate = parseInt(document.getElementById("interestRate").value);
 	var time = parseInt(document.getElementById("time").value);
-	var cagr = ((presentValue * (1 + interestRate * 0.01) ** time) + contribution * ((1 + interestRate * 0.01) ** time - 1) / (interestRate*0.01)).toFixed();
+	var cagr = (presentValue * (1 + interestRate * 0.01) ** time + contribution * (((1 + interestRate * 0.01) ** time - 1) / (interestRate*0.01))*(1+interestRate*0.01)).toFixed(2);
 	
 	if(!isNaN(cagr)) {
 	
@@ -57,7 +27,34 @@ function cagrCalculator() {
 	}
 }
 
+function showRate() {
 
+	var rateValue = document.getElementById('rate');
+	var displayRate = document.getElementById('displayRate');
+
+	if (rateValue.style.display == 'block') {
+		rateValue.style.display = 'none';
+		displayRate.innerHTML = 'Growth Rate';
+	}
+	else {
+		rateValue.style.display = 'block';
+		displayRate.innerHTML = 'Hide';
+	}
+}
+
+function rateCalculator() {
+	
+	// var contribution = parseInt(document.getElementById("contribution").value);
+	var initialValue = parseInt(document.getElementById("initialValue").value);
+	var finalValue = parseInt(document.getElementById("finalValue").value);
+	var time = parseInt(document.getElementById("duration").value);
+	var rate = (((finalValue / initialValue) **  (1 / time) - 1) * 100).toFixed(2);
+	
+	if(!isNaN(rate)) {
+	
+		document.getElementById("growthRate").innerHTML = "Your investment growth rate is " + rate + " %.";
+	}
+}
 
 function toggleClouds() {
 
