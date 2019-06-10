@@ -8,10 +8,10 @@ body {
 
 	/*background-size: cover;*/
 	/*background-repeat: no-repeat;*/
-	height: 1180px;
+	height: 100%;
 	/*float: left;*/
 	width: 100%;
-	position: relative;
+	position: absolute;
 	top: 0;
 	left: 0;
 	overflow: scroll;
@@ -52,10 +52,10 @@ p {
 
 .navbar {
 
-	position: fixed;
+	position: relative;
 	background-color: gray;
 	overflow: visible;
-	top: 13%;
+	/*top: 12.5%;*/
 	width: 100%;
 	height: 30px;
 	box-shadow: 0px 2px 5px black;
@@ -65,9 +65,9 @@ p {
 
 #menu {
 
-	position: fixed;
+	position: relative;
 	background-color: gray;
-	top: 130px;
+	/*top: 12.5%;*/
 	width: 100%;
 	height: 30px;
 	box-shadow: 0px 2px 5px black;
@@ -185,10 +185,11 @@ p {
 
 .toppic {
 
-	position: fixed;
+	position: relative;
 	/*z-index: 10;*/
-	height: 140px;
+	height: 12.5%;
 	width: 100%;
+	top: 0;
 	/*z-index: ;*/
 	background: url("pictures/swirlyclouds.jpg");
 	background-size: cover;
@@ -199,11 +200,11 @@ p {
 
 .bottompic {
 
-	height: 1000px;
+	height: 85%;
 	width: 100%;
 	margin-left: 0px;
-	position: fixed;
-	top: 140px;
+	position: relative;
+	/*top: 2.5%;*/
 	float: left;
 	z-index: 0;
 
