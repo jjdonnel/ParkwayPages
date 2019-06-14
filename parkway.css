@@ -461,3 +461,17 @@ h2 {
 	color: rgba(0, 0, 100);
 
 }
+
+.wxData {
+	position: absolute;
+}
+
+.box {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	margin-left: 90%;
+	margin-top: 20px;
+	float: right;
+	background-color: rgba(0,0,10,0.2);
+}
